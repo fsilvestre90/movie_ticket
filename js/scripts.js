@@ -16,7 +16,12 @@ Ticket.prototype.matineeDiscount = function() {
     if(this.movieTime >= 17)
         return (this.price - 1);
     return this.price;
+}
 
+Ticket.prototype.firstReleaseDiscount = function() {
+    if(this.firstRelease === false)
+        return (this.price - 1);
+    return this.price;
 }
 
 

@@ -28,4 +28,9 @@ describe('Ticket', function() {
         expect(testTicket.matineeDiscount()).to.equal(8.50);
     });
 
+    it("applies discount to first releases", function() {
+        var testTicket = new Ticket(8.50, "3 Ninjas", 12, 21, false);
+        expect(testTicket.firstReleaseDiscount()).to.equal(7.50);
+    })
+
 });
